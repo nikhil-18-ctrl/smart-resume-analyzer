@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Resume Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2>SmartResume</h2>
+        <span>AI-Powered Resume Analysis</span>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Analyze Your Resume Like a Recruiter</h1>
+            <p>Get ATS score, skill match, and improvement suggestions instantly.</p>
+        </div>
+    </section>
+
+    <!-- FORM CARD -->
+    <section class="card">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+
+            <label>Upload Resume (PDF / DOCX)</label>
+            <input type="file" name="resume" required>
+
+            <label>Paste Job Description</label>
+            <textarea name="jd" rows="6" required></textarea>
+
+            <button type="submit">Analyze Resume</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Built by Nikhil | Final Year B.Tech Project 🚀</p>
+    </footer>
+
+</body>
+</html>

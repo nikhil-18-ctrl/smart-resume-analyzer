@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>SmartResume</h2>
+    </nav>
+
+    <section
+
+    <section class="result-container">
+
+        <div class="score-box">
+            <h1>ATS Score</h1>
+            <h2>{{ score }}%</h2>
+        </div>
+
+        <div class="grid">
+
+            <div class="box success">
+                <h3>Matched Skills</h3>
+                <ul>
+                    {% for skill in matched %}
+                        <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="box danger">
+                <h3>Missing Skills</h3>
+                <ul>
+                    {% for skill in missing %}
+                        <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="box suggestion">
+            <h3>Suggestions</h3>
+            <ul>
+                {% for s in suggestions %}
+                    <li>{{ s }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <a href="/" class="back-btn">Analyze Another Resume</a>
+
+    </section>
+
+</body>
+</html>
