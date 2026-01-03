@@ -1,6 +1,7 @@
-Flask
-gunicorn
-pdfplumber
-python-docx
+flask
+flask-cors
+nltk
 scikit-learn
-numpy
+python-docx
+pdfminer.six
+gunicorn
